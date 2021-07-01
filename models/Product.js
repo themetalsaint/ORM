@@ -9,7 +9,7 @@ class Product extends Model {}
 // set up fields and rules for Product model
 Product.init(
   {
-    // define columns
+    // define columns - DONE
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -38,7 +38,7 @@ Product.init(
     category_id:{
       type: DataTypes.INTEGER,
       references: {
-        model: 'category',
+        model: 'Category',
         key: 'id',
       },
     },
@@ -51,5 +51,4 @@ Product.init(
     modelName: 'product',
   }
 );
-///need to finish this - see readme
 module.exports = Product;
